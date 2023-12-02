@@ -1,8 +1,19 @@
-import dayOne.DayOne
+import DayOne.DayOne
+import InputReader.StringFileInputReader
 
 fun main(args: Array<String>) {
-    when(val day: Int? = getOptions(args)["-day"]?.getOrNull(0)?.toInt()) {
-        1 -> println("Day 1: ${DayOne().totalCalibrations}")
+    val options = getOptions(args)
+    val dayOptions = options["-day"]
+    when(val day: Int? = dayOptions?.getOrNull(0)?.toInt()) {
+        1 -> {
+            when(val dayPart: Int? = dayOptions.getOrNull(1)?.toInt()) {
+                0 -> println("Day 1: ${DayOne(StringFileInputReader("out/production/adventofcode2023/day1example.txt").fileData).totalCalibrations}")
+                1 -> println("Day 1: ${DayOne(StringFileInputReader("out/production/adventofcode2023/day1.txt").fileData).totalCalibrations}")
+                else -> {
+                    println("day $day part? $dayPart")
+                }
+            }
+        }
         else -> {
             println("what day is it? $day")
         }
