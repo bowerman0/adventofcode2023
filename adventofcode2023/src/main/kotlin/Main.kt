@@ -1,5 +1,6 @@
 import DayOne.DayOne
 import DayOne.DayOnePartTwo
+import DayTwo.DayTwo
 import InputReader.StringFileInputReader
 
 fun main(args: Array<String>) {
@@ -13,6 +14,15 @@ fun main(args: Array<String>) {
                 1 -> println("Day 1: ${DayOne(StringFileInputReader("out/production/adventofcode2023/day1.txt").fileData).totalCalibrations}")
                 2 -> println("Day 1: ${DayOnePartTwo(StringFileInputReader("out/production/adventofcode2023/day1part2example.txt").fileData).totalCalibrations}")
                 3 -> println("Day 1: ${DayOnePartTwo(StringFileInputReader("out/production/adventofcode2023/day1part2.txt").fileData).totalCalibrations}")
+                else -> {
+                    println("day $day part? $dayPart")
+                }
+            }
+        }
+        2 -> {
+            when(val dayPart: Int? = dayOptions.getOrNull(1)?.toInt()) {
+                0 -> println("Day 2: ${DayTwo(StringFileInputReader("out/production/adventofcode2023/day2example.txt").fileData).totalPossible()}")
+                1 -> println("Day 2: ${DayTwo(StringFileInputReader("out/production/adventofcode2023/day2.txt").fileData).totalPossible()}")
                 else -> {
                     println("day $day part? $dayPart")
                 }
