@@ -1,3 +1,4 @@
+import DayFour.DayFour
 import DayOne.DayOne
 import DayOne.DayOnePartTwo
 import DayThree.DayThree
@@ -39,6 +40,15 @@ fun main(args: Array<String>) {
                 1 -> println("Day 3: ${DayThree(StringFileInputReader("out/production/adventofcode2023/day3.txt").fileData).schematicTotal}")
                 2 -> println("Day 3: ${DayThreePartTwo(StringFileInputReader("out/production/adventofcode2023/day3example.txt").fileData).schematicTotal}")
                 3 -> println("Day 3: ${DayThreePartTwo(StringFileInputReader("out/production/adventofcode2023/day3.txt").fileData).schematicTotal}")
+                else -> {
+                    println("day $day part? $dayPart")
+                }
+            }
+        }
+        4 -> {
+            when (val dayPart: Int? = dayOptions.getOrNull(1)?.toInt()) {
+                0 -> println("Day 4: ${DayFour(StringFileInputReader("out/production/adventofcode2023/day4example.txt").fileData, 5, 8).totalValue}")
+                1 -> println("Day 4: ${DayFour(StringFileInputReader("out/production/adventofcode2023/day4.txt").fileData, 10, 25).totalValue}")
                 else -> {
                     println("day $day part? $dayPart")
                 }
