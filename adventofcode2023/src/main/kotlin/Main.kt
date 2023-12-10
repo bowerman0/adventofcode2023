@@ -1,6 +1,7 @@
 import DayOne.DayOne
 import DayOne.DayOnePartTwo
 import DayThree.DayThree
+import DayThree.DayThreePartTwo
 import DayTwo.DayTwo
 import DayTwo.DayTwoPartTwo
 import InputReader.StringFileInputReader
@@ -36,6 +37,8 @@ fun main(args: Array<String>) {
             when (val dayPart: Int? = dayOptions.getOrNull(1)?.toInt()) {
                 0 -> println("Day 3: ${DayThree(StringFileInputReader("out/production/adventofcode2023/day3example.txt").fileData).schematicTotal}")
                 1 -> println("Day 3: ${DayThree(StringFileInputReader("out/production/adventofcode2023/day3.txt").fileData).schematicTotal}")
+                2 -> println("Day 3: ${DayThreePartTwo(StringFileInputReader("out/production/adventofcode2023/day3example.txt").fileData).schematicTotal}")
+                3 -> println("Day 3: ${DayThreePartTwo(StringFileInputReader("out/production/adventofcode2023/day3.txt").fileData).schematicTotal}")
                 else -> {
                     println("day $day part? $dayPart")
                 }
